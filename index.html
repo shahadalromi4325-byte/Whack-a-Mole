@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-Mole</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ── Game Card ─────────────────────────────────────── -->
+    <div class="game-container">
+        <h1>Whack-a-Mole</h1>
+
+        <div class="stats">
+            <p>Score: <span id="score">0</span></p>
+            <p>Time:  <span id="time">30</span>s</p>
+        </div>
+
+        <button id="start-btn">Play New Game!</button>
+
+        <!-- 3×2 grid of holes -->
+        <div class="board">
+            <div class="hole"><img src="Media/hole-empty.png" class="mole-img" alt="hole"></div>
+            <div class="hole"><img src="Media/hole-empty.png" class="mole-img" alt="hole"></div>
+            <div class="hole"><img src="Media/hole-empty.png" class="mole-img" alt="hole"></div>
+            <div class="hole"><img src="Media/hole-empty.png" class="mole-img" alt="hole"></div>
+            <div class="hole"><img src="Media/hole-empty.png" class="mole-img" alt="hole"></div>
+            <div class="hole"><img src="Media/hole-empty.png" class="mole-img" alt="hole"></div>
+        </div>
+    </div>
+
+    <!-- ── Game-Over Modal ───────────────────────────────── -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Time's Up!</h2>
+            <p id="final-score"></p>
+            <div class="modal-buttons">
+                <button id="modal-restart-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
